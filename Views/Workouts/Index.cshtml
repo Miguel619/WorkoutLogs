@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DoTheWork.Models.Log>
+﻿@model IEnumerable<DoTheWork.Models.Workout>
 
 @{
     ViewData["Title"] = "Index";
@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Calories)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +38,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Calories)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

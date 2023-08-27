@@ -19,7 +19,7 @@ namespace DoTheWork.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DoTheWork.Models.Log", b =>
+            modelBuilder.Entity("DoTheWork.Models.Workout", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -31,6 +31,9 @@ namespace DoTheWork.Data.Migrations
 
                     b.Property<int>("Calories")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Duration")
                         .HasColumnType("nvarchar(max)");

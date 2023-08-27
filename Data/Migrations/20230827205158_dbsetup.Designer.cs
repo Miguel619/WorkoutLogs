@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DoTheWork.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230827054114_updatedsetup")]
-    partial class updatedsetup
+    [Migration("20230827205158_dbsetup")]
+    partial class dbsetup
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace DoTheWork.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("DoTheWork.Models.Log", b =>
+            modelBuilder.Entity("DoTheWork.Models.Workout", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,6 +33,9 @@ namespace DoTheWork.Data.Migrations
 
                     b.Property<int>("Calories")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Duration")
                         .HasColumnType("nvarchar(max)");

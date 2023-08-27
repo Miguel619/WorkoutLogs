@@ -11,6 +11,7 @@ namespace DoTheWork.Models
         public string Activity { get; set; }
         public string Duration { get; set; }
         public int Calories { get; set; }
+        public DateTime Date { get; set; }
         public Workout()
         {
 

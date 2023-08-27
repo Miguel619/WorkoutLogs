@@ -19,13 +19,13 @@ namespace DoTheWork.Controllers
             _context = context;
         }
 
-        // GET: Logs
+        // GET: Workouts
         public async Task<IActionResult> Index()
         {
             return View(await _context.Log.ToListAsync());
         }
 
-        // GET: Logs/Details/5
+        // GET: Workouts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace DoTheWork.Controllers
                 return NotFound();
             }
 
-            var log = await _context.Log
+            var workout = await _context.Log
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (log == null)
+            if (workout == null)
             {
                 return NotFound();
             }
 
-            return View(log);
+            return View(workout);
         }
 
-        // GET: Logs/Create
+        // GET: Workouts/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Logs/Create
+        // POST: Workouts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Activity,Duration,Calories")] Workout log)
+        public async Task<IActionResult> Create([Bind("Id,Activity,Duration,Calories,Date")] Workout workout)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(log);
+                _context.Add(workout);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(log);
+            return View(workout);
         }
 
-        // GET: Logs/Edit/5
+        // GET: Workouts/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace DoTheWork.Controllers
                 return NotFound();
             }
 
-            var log = await _context.Log.FindAsync(id);
-            if (log == null)
+            var workout = await _context.Log.FindAsync(id);
+            if (workout == null)
             {
                 return NotFound();
             }
-            return View(log);
+            return View(workout);
         }
 
-        // POST: Logs/Edit/5
+        // POST: Workouts/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Activity,Duration,Calories")] Workout log)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Activity,Duration,Calories,Date")] Workout workout)
         {
-            if (id != log.Id)
+            if (id != workout.Id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace DoTheWork.Controllers
             {
                 try
                 {
-                    _context.Update(log);
+                    _context.Update(workout);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!LogExists(log.Id))
+                    if (!WorkoutExists(workout.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace DoTheWork.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(log);
+            return View(workout);
         }
 
-        // GET: Logs/Delete/5
+        // GET: Workouts/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,28 +124,28 @@ namespace DoTheWork.Controllers
                 return NotFound();
             }
 
-            var log = await _context.Log
+            var workout = await _context.Log
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (log == null)
+            if (workout == null)
             {
                 return NotFound();
             }
 
-            return View(log);
+            return View(workout);
         }
 
-        // POST: Logs/Delete/5
+        // POST: Workouts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var log = await _context.Log.FindAsync(id);
-            _context.Log.Remove(log);
+            var workout = await _context.Log.FindAsync(id);
+            _context.Log.Remove(workout);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LogExists(int id)
+        private bool WorkoutExists(int id)
         {
             return _context.Log.Any(e => e.Id == id);
         }
