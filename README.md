@@ -30,7 +30,7 @@ Before you begin, make sure you have the following:
 5. Ensure database is updated by running the following in the Package Manager Console: `update-database`
 6. Run the project by clicking the play button next to IIS Express at the top
 
-      ![Screenshot IIS](Screenshots/IIS.png)
+![Screenshot IIS](Screenshots/IIS.png)
 
 ## 📸 Screenshots
 
