@@ -42,10 +42,6 @@ Before you begin, make sure you have the following:
 
 Contributions are welcome! Just fork this repository, create a new branch, commit your changes, and submit a pull request. Let's make this app even better together! 🤗
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 
 Created with ❤️ by [Miguel](https://github.com/Miguel619)
