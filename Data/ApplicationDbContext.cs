@@ -13,6 +13,6 @@ namespace DoTheWork.Data
             : base(options)
         {
         }
-        public DbSet<DoTheWork.Models.Log> Log { get; set; }
+        public DbSet<DoTheWork.Models.Workout> Log { get; set; }
     }
 }

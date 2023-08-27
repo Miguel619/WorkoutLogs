@@ -10,11 +10,11 @@ using DoTheWork.Models;
 
 namespace DoTheWork.Controllers
 {
-    public class LogsController : Controller
+    public class WorkoutsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public LogsController(ApplicationDbContext context)
+        public WorkoutsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -54,7 +54,7 @@ namespace DoTheWork.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Activity,Duration,Calories")] Log log)
+        public async Task<IActionResult> Create([Bind("Id,Activity,Duration,Calories")] Workout log)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace DoTheWork.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Activity,Duration,Calories")] Log log)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Activity,Duration,Calories")] Workout log)
         {
             if (id != log.Id)
             {
