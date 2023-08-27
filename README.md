@@ -19,6 +19,7 @@ Welcome to **Workout Logger**, the ultimate workout tracking solution! 🚀
 Before you begin, make sure you have the following:
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) with ASP.NET MVC installed.
+- [.NET Core 3.1.](https://dotnet.microsoft.com/download/dotnet-core/3.1) installed.
 
 ## 🚀 Getting Started
 
