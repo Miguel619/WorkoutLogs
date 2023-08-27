@@ -26,8 +26,8 @@ Welcome to **Workout Logger**, the ultimate workout tracking solution! 🚀
 
 ## 📸 Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 1](Screenshots/screenshot1.png)
+![Screenshot 2](Screenshots/screenshot2.png)
 
 ## 🤝 Contributing
 
