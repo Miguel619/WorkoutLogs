@@ -16,7 +16,7 @@ Welcome to **Workout Logger**, the ultimate workout tracking solution! 🚀
 
 ## 🚀 Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/workout-logger.git`
+1. Clone the repository: `git clone https://github.com/yourusername/WorkoutLogs.git`
 2. Navigate to the project directory: `cd workout-logger`
 3. Install dependencies: `dotnet restore`
 4. Configure your SQL database connection in `appsettings.json`.
@@ -28,6 +28,7 @@ Welcome to **Workout Logger**, the ultimate workout tracking solution! 🚀
 
 ![Screenshot 1](Screenshots/screenshot1.png)
 ![Screenshot 2](Screenshots/screenshot2.png)
+![Screenshot 3](Screenshots/screenshot3.png)
 
 ## 🤝 Contributing
 
